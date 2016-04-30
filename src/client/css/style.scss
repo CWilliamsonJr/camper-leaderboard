@@ -1,0 +1,48 @@
+
+$size: 70px;
+$basecolor: #FAEBD7 ;
+
+table,th,td{
+  border: 1px solid black;
+  padding-left: 5px;
+}
+
+.avatarimg{
+  width: $size;
+  height: $size;
+}
+tr:nth-child(even){
+  background-color: $basecolor
+}
+tr:nth-child(odd){
+  background-color: white;
+}
+th, tr{
+  padding:10px;
+}
+caption{
+  text-align: center;
+}
+td:nth-last-child(-n+2){
+  @extend caption;
+  width: 200px;
+}
+th{
+  @extend caption;
+}
+.no-show{
+  display: none;
+}
+th:hover{
+  background-color: orange;
+}
+.table-caption{
+  background-color: Brown;
+  color:white;
+}
+.container{
+  margin-top: 50px;
+}
+body{
+  background-color: CadetBlue ;
+}
