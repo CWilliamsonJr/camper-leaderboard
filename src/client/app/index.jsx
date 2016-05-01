@@ -94,5 +94,7 @@ class TableData extends React.Component { // Displays the table
     }
 }
 
+const content = document.getElementById('content');
+
 ReactDOM.render(
     <TableContainer/>, content);
