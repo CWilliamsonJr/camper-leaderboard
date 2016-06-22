@@ -45,21 +45,16 @@ class TableData extends React.Component { // Displays the table
         });
     }
     changeSort(sort){
-     let campers = this.state.campers;
-     if(sort === 'alltime'){
-        let newcampers = campers.sort((a,b) =>{
-             return b.alltime - a.alltime;
-         });
+      let campers = this.state.campers;
+     if(sort === 'alltime'){         
+         this.getCampers(sort);
          $('#alltime').removeClass('no-show');
-         $('#recent').addClass('no-show');
-         this.setState({campers:newcampers});
-     }else{
-        let newcampers = campers.sort((a,b) =>{
-             return b.recent - a.recent;
-         });
+         $('#recent').addClass('no-show');         
+     }else{       
+         this.getCampers();
          $('#recent').removeClass('no-show');
          $('#alltime').addClass('no-show')
-         this.setState({campers:newcampers});
+        
      }
     }
 
